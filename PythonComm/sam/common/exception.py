@@ -13,7 +13,7 @@ class MyException(Exception):
 #     def _set_message(self, message): 
 #         self._message = message
 #     message = property(_get_message, _set_message)
-
+# yes , there is a diff
 try:
     raise MyException('description1', 'description2')
 except MyException as my:
