@@ -19,7 +19,6 @@ def aFunction(args=None):
     print args
  
 print "2:Finished decorating aFunction()"
- 
 aFunction()
 print "another call"
 aFunction(args="value")
