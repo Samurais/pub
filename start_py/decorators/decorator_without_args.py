@@ -1,3 +1,8 @@
+import unittest
+import sys
+
+print sys.path
+
 class decoratorWithoutArguments(object):
  
     def __init__(self, f):
@@ -20,11 +25,16 @@ class decoratorWithoutArguments(object):
 @decoratorWithoutArguments
 def sayHello(a1, a2, a3, a4):
     print 'sayHello arguments:', a1, a2, a3, a4
- 
-print "After decoration"
- 
-print "Preparing to call sayHello()"
-sayHello("say", "hello", "argument", "list")
-print "After first sayHello() call"
-sayHello("a", "different", "set of", "arguments")
-print "After second sayHello() call"
+
+class DecoratorTest(unittest.TestCase):
+
+    def testCall(self):
+        print "Preparing to call sayHello()"
+        sayHello("say", "hello", "argument", "list")
+        print "After first sayHello() call"
+        sayHello("a", "different", "set of", "arguments")
+        print "After second sayHello() call"
+        self.assertTrue(1)
+
+if __name__ == "__main__":
+    unittest.main()
