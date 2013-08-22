@@ -1,4 +1,4 @@
-:''
+'''
 Created on Aug 15, 2013
 
 @author: hailiang
@@ -13,6 +13,7 @@ class MyException(Exception):
 #     def _set_message(self, message): 
 #         self._message = message
 #     message = property(_get_message, _set_message)
+
 try:
     raise MyException('description1', 'description2')
 except MyException as my:
@@ -25,5 +26,3 @@ except MyException as my:
     print str(my)  
     print unicode(my)  
     
-
-# another miss up change
