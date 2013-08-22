@@ -1,5 +1,4 @@
 pub
 ===
 
-a shared repo 
-yo can edit now. 
+Learn Python Knowledge as a newbee
