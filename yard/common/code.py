@@ -11,3 +11,9 @@ print b
 
 c="hello"
 
+def foo(bar):
+    print bar
+
+if __name__ == "__main__":
+    foo( \
+        "yes")
